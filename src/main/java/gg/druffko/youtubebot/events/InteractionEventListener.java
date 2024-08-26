@@ -11,10 +11,10 @@ public class InteractionEventListener extends ListenerAdapter {
         //event.reply("Hello").queue();
 
         switch (event.getName()){
-            case "bot-status":
-                event.reply("Hi, I'm Druffko's RSS Discord Bot and I am running! You can find me at: https://github.com/druffko-gg/discord-rss-bot").queue();
+            case "bot-info":
+                event.reply("Hi, I'm Druffko's YouTube Discord Bot and I am running! You can find me at: https://github.com/druffko-gg/discord-youtube-bot").queue();
                 break;
-            case "rss-url":
+            case "channel-url":
                 event.reply("I'm currently posting " + Settings.channelId + " into a channel on this server.").queue();
         }
     }

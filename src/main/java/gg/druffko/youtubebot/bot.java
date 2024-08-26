@@ -5,6 +5,7 @@ import gg.druffko.youtubebot.content.YouTubeGrabber;
 import gg.druffko.youtubebot.events.InteractionEventListener;
 import gg.druffko.youtubebot.events.MessageEventListener;
 import gg.druffko.youtubebot.events.ReadyEventListener;
+import gg.druffko.youtubebot.events.SlashCommands;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
@@ -23,6 +24,9 @@ public class bot {
                 .addEventListeners(new ReadyEventListener(), new MessageEventListener(), new InteractionEventListener())
                 .build();
         jda.awaitReady();
+
+        // Activate SlashCommands
+        SlashCommands.activateSlashCommands();
 
         //send messages to channel
         TextChannel textChannel = jda.getTextChannelById(Settings.dcytChannel);
